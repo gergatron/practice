@@ -1,0 +1,36 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++ https://github.com/john-smilga/javascript-basic-projects/tree/master/6-modal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
+
+// select modal-btn,modal-overlay,close-btn
+// listen for click events on modal-btn and close-btn
+// when user clicks modal-btn add .open-modal to modal-overlay
+// when user clicks close-btn remove .open-modal from modal-overlay
+
+
+/*=================================
+## Get Elements 
+=================================*/
+
+const modalBtn = document.querySelector(".modal-btn");
+const modal = document.querySelector(".modal-overlay");
+const closeBtn = document.querySelector(".close-btn");
+
+/*================================
+## Build Functions 
+=================================*/
+
+const open = () => {
+  modal.classList.add('open-modal');
+}
+
+const close = () => {
+  modal.classList.remove('open-modal'); 
+}
+
+
+/*===============================
+## Hook Event Listeners
+================================*/
+modalBtn.addEventListener('click', open);
+closeBtn.addEventListener('click', close);
